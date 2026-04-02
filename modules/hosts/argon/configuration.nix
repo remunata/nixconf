@@ -10,6 +10,7 @@
         # Base
         self.nixosModules.nvidia
         self.nixosModules.packages
+        self.nixosModules.services
         self.nixosModules.system
         self.nixosModules.user
 

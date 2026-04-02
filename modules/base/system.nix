@@ -39,9 +39,6 @@
         powerOnBoot = true;
       };
 
-      # Enable gvfs for trash management
-      services.gvfs.enable = true;
-
       # Security.
       security = {
         rtkit.enable = true;
