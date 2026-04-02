@@ -12,6 +12,7 @@
         yazi
         libreoffice
         pavucontrol
+        btop
       ];
     };
 }
