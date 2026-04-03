@@ -121,6 +121,7 @@
                 matches = [
                   { app-id = "firefox"; }
                   { app-id = "spotify"; }
+                  { app-id = "wezterm"; }
                 ];
                 open-maximized = true;
               }
@@ -177,11 +178,11 @@
               "Mod+5".focus-workspace = "w4";
               "Mod+6".focus-workspace = "w5";
 
-              "Mod+I".focus-workspace-up = _: { };
-              "Mod+U".focus-workspace-down = _: { };
+              "Mod+U".focus-workspace-up = _: { };
+              "Mod+D".focus-workspace-down = _: { };
 
-              "Mod+Shift+U".move-column-to-workspace-down = _: { };
-              "Mod+Shift+I".move-column-to-workspace-up = _: { };
+              "Mod+Shift+D".move-column-to-workspace-down = _: { };
+              "Mod+Shift+U".move-column-to-workspace-up = _: { };
 
               "Mod+Shift+1".move-column-to-workspace = "w0";
               "Mod+Shift+2".move-column-to-workspace = "w1";
@@ -219,6 +220,7 @@
               # Noctalia keybinds
               "Alt+Space".spawn-sh = "${noctaliaExe} ipc call launcher toggle";
               "Mod+Shift+Period".spawn-sh = "${noctaliaExe} ipc call settings toggle";
+              "Mod+M".spawn-sh = "${noctaliaExe} ipc call controlCenter toggle";
               "Mod+Alt+L".spawn-sh = "${noctaliaExe} ipc call lockScreen lock";
               "Mod+P".spawn-sh = "${noctaliaExe} ipc call systemMonitor toggle";
               "Mod+V".spawn-sh = "${noctaliaExe} ipc call launcher clipboard";
@@ -233,7 +235,6 @@
               "XF86AudioPlay".spawn-sh = "${noctaliaExe} ipc call volume playPause";
               "XF86AudioNext".spawn-sh = "${noctaliaExe} ipc call volume next";
               "XF86AudioPrev".spawn-sh = "${noctaliaExe} ipc call volume previous";
-              "Mod+M".spawn-sh = "${noctaliaExe} ipc call media toggle";
 
               # Brightness
               "XF86MonBrightnessUp".spawn-sh = "${noctaliaExe} ipc call brightness increase";
