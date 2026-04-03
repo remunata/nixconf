@@ -155,10 +155,12 @@
               }
               {
                 matches = [
-                  { app-id = "wezterm"; }
+                  { app-id = "Alacritty"; }
                   { is-focused = false; }
                 ];
-                opacity = 0.94;
+                opacity = 0.93;
+                draw-border-with-background = false;
+
               }
             ];
 
@@ -252,9 +254,9 @@
               "Mod+Period".expel-window-from-column = _: { };
 
               # spawn programs
-              "Mod+Return".spawn = "wezterm";
+              "Mod+Return".spawn = "alacritty";
               "Mod+W".spawn = "firefox";
-              "Mod+E".spawn-sh = "wezterm -e yazi";
+              "Mod+E".spawn-sh = "alacritty -e yazi";
 
               # Screenshot
               "Print".screenshot = _: { };

@@ -15,6 +15,7 @@
         self.nixosModules.user
 
         # Features
+        self.nixosModules.alacritty
         self.nixosModules.coding
         self.nixosModules.firefox
         self.nixosModules.gaming
@@ -22,7 +23,6 @@
         self.nixosModules.no-config
         self.nixosModules.shell
         self.nixosModules.spicetify
-        self.nixosModules.wezterm
       ];
 
       # Bootloader.
