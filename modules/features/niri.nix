@@ -63,8 +63,27 @@
             # Monitor configuration
             outputs = {
               "eDP-1" = {
-                mode = "1920x1080@60";
+                mode = "1920x1080@60.000";
                 scale = 1.;
+                position = _: {
+                  props = {
+                    x = 1920;
+                    y = 0;
+                  };
+                };
+              };
+
+              "HDMI-A-1" = {
+                mode = "1920x1080@143.997";
+                scale = 1.;
+                position = _: {
+                  props = {
+                    x = 0;
+                    y = 0;
+                  };
+                };
+
+                focus-at-startup = _: { };
               };
             };
 
@@ -96,11 +115,11 @@
 
             # Layout configuration
             layout = {
-              gaps = 16;
+              gaps = 12;
               always-center-single-column = _: { };
 
               focus-ring = {
-                width = 2;
+                width = 5;
                 active-color = "#2D2A3E";
                 inactive-color = "#140A1D";
               };
@@ -129,7 +148,8 @@
                 matches = [
                   { app-id = "firefox"; }
                   { app-id = "spotify"; }
-                  { app-id = "wezterm"; }
+                  { app-id = "heroic"; }
+                  { app-id = "steam"; }
                 ];
                 open-maximized = true;
               }
@@ -179,12 +199,15 @@
               "Mod+Shift+K".move-window-up = _: { };
               "Mod+Shift+J".move-window-down = _: { };
 
-              "Mod+1".focus-workspace = "w0";
-              "Mod+2".focus-workspace = "w1";
-              "Mod+3".focus-workspace = "w2";
-              "Mod+4".focus-workspace = "w3";
-              "Mod+5".focus-workspace = "w4";
-              "Mod+6".focus-workspace = "w5";
+              "Mod+1".focus-workspace = 1;
+              "Mod+2".focus-workspace = 2;
+              "Mod+3".focus-workspace = 3;
+              "Mod+4".focus-workspace = 4;
+              "Mod+5".focus-workspace = 5;
+              "Mod+6".focus-workspace = 6;
+              "Mod+7".focus-workspace = 7;
+              "Mod+8".focus-workspace = 8;
+              "Mod+9".focus-workspace = 9;
 
               "Mod+U".focus-workspace-up = _: { };
               "Mod+D".focus-workspace-down = _: { };
@@ -192,17 +215,30 @@
               "Mod+Shift+D".move-column-to-workspace-down = _: { };
               "Mod+Shift+U".move-column-to-workspace-up = _: { };
 
-              "Mod+Shift+1".move-column-to-workspace = "w0";
-              "Mod+Shift+2".move-column-to-workspace = "w1";
-              "Mod+Shift+3".move-column-to-workspace = "w2";
-              "Mod+Shift+4".move-column-to-workspace = "w3";
-              "Mod+Shift+5".move-column-to-workspace = "w4";
-              "Mod+Shift+6".move-column-to-workspace = "w5";
+              "Mod+Shift+1".move-column-to-workspace = 1;
+              "Mod+Shift+2".move-column-to-workspace = 2;
+              "Mod+Shift+3".move-column-to-workspace = 3;
+              "Mod+Shift+4".move-column-to-workspace = 4;
+              "Mod+Shift+5".move-column-to-workspace = 5;
+              "Mod+Shift+6".move-column-to-workspace = 6;
+              "Mod+Shift+7".move-column-to-workspace = 7;
+              "Mod+Shift+8".move-column-to-workspace = 8;
+              "Mod+Shift+9".move-column-to-workspace = 9;
 
-              "Mod+Ctrl+H".set-column-width = "-5%";
-              "Mod+Ctrl+L".set-column-width = "+5%";
-              "Mod+Ctrl+J".set-window-height = "-5%";
-              "Mod+Ctrl+K".set-window-height = "+5%";
+              "Mod+Ctrl+Left".set-column-width = "-5%";
+              "Mod+Ctrl+Right".set-column-width = "+5%";
+              "Mod+Ctrl+Down".set-window-height = "-5%";
+              "Mod+Ctrl+Up".set-window-height = "+5%";
+
+              "Mod+Ctrl+L".focus-monitor-right = _: { };
+              "Mod+Ctrl+H".focus-monitor-left = _: { };
+              "Mod+Ctrl+K".focus-monitor-up = _: { };
+              "Mod+Ctrl+J".focus-monitor-down = _: { };
+
+              "Mod+Ctrl+Shift+L".move-column-to-monitor-right = _: { };
+              "Mod+Ctrl+Shift+H".move-column-to-monitor-left = _: { };
+              "Mod+Ctrl+Shift+K".move-column-to-monitor-up = _: { };
+              "Mod+Ctrl+Shift+J".move-column-to-monitor-down = _: { };
 
               "Mod+WheelScrollUp".focus-column-left = _: { };
               "Mod+WheelScrollDown".focus-column-right = _: { };
@@ -250,16 +286,6 @@
 
               # Miscellaneous
               "Mod+O".toggle-overview = _: { repeat = false; };
-            };
-
-            # Predifined workspaces
-            workspaces = {
-              "w0" = _: { };
-              "w1" = _: { };
-              "w2" = _: { };
-              "w3" = _: { };
-              "w4" = _: { };
-              "w5" = _: { };
             };
 
             # Prove xwayland-satellite path for niri
