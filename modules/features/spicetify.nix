@@ -17,7 +17,7 @@
           hidePodcasts
         ];
 
-        theme = spicePkgs.themes.text;
+        theme = spicePkgs.themes.comfy;
       };
     };
 }
