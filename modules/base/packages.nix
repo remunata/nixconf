@@ -5,7 +5,7 @@
     {
       # System packages
       environment.systemPackages = with pkgs; [
-        inputs.remvim.packages.${pkgs.stdenv.hostPlatform.system}.remvim
+        inputs.remuvim.packages.${pkgs.stdenv.hostPlatform.system}.neovim
         wget
         wget2
         wl-clipboard

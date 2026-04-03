@@ -3,9 +3,18 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     flake-parts.url = "github:hercules-ci/flake-parts";
     import-tree.url = "github:vic/import-tree";
-    wrapper-modules.url = "github:BirdeeHub/nix-wrapper-modules";
+    wrapper-modules = {
+      url = "github:BirdeeHub/nix-wrapper-modules";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
-    remvim.url = "github:remunata/remvim";
+    remuvim = {
+      url = "github:remunata/remuvim";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        wrappers.follows = "wrapper-modules";
+      };
+    };
 
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
