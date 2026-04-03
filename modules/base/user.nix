@@ -13,5 +13,9 @@
           "docker"
         ];
       };
+
+      nix.extraOptions = ''
+        trusted-users = root remunata
+      '';
     };
 }
