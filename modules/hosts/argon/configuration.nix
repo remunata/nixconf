@@ -15,6 +15,7 @@
         self.nixosModules.user
 
         # Features
+        self.nixosModules.coding
         self.nixosModules.firefox
         self.nixosModules.gaming
         self.nixosModules.niri
