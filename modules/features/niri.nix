@@ -156,7 +156,6 @@
               {
                 matches = [
                   { app-id = "wezterm"; }
-                  { is-focused = false; }
                 ];
                 opacity = 0.93;
               }
