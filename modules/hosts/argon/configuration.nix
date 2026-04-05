@@ -23,6 +23,7 @@
         self.nixosModules.no-config
         self.nixosModules.shell
         self.nixosModules.spicetify
+        self.nixosModules.wezterm
       ];
 
       # Bootloader.
