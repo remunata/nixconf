@@ -13,6 +13,7 @@
         libreoffice
         pavucontrol
         btop
+        obsidian
       ];
     };
 }

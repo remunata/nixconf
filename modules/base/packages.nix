@@ -44,6 +44,7 @@
           "discord"
           "steam"
           "steam-unwrapped"
+          "obsidian"
         ];
     };
 }
