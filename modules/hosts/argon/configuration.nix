@@ -21,6 +21,7 @@
         self.nixosModules.gaming
         self.nixosModules.niri
         self.nixosModules.no-config
+        self.nixosModules.recording
         self.nixosModules.shell
         self.nixosModules.spicetify
         self.nixosModules.wezterm
