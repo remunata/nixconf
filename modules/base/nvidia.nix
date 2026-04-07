@@ -1,9 +1,12 @@
-{ ... }:
+{ inputs, ... }:
 {
   flake.nixosModules.nvidia =
-    { config, ... }:
+    { config, pkgs, ... }:
 
     {
+      # Overlay for nvidia video encoding patch
+      nixpkgs.overlays = [ inputs.nvidia-patch.overlays.default ];
+
       # Enable OpenGL
       hardware.graphics = {
         enable = true;
@@ -29,7 +32,11 @@
         nvidiaSettings = true;
 
         # Use legacy driver cause my gpu is old :)
-        package = config.boot.kernelPackages.nvidiaPackages.legacy_580;
+        package = pkgs.nvidia-patch.patch-nvenc (
+          pkgs.nvidia-patch.patch-fbc config.boot.kernelPackages.nvidiaPackages.legacy_580
+        );
+
+        # Use proprietary driver
         open = false;
 
         prime = {
