@@ -150,6 +150,7 @@
                   { app-id = "spotify"; }
                   { app-id = "heroic"; }
                   { app-id = "steam"; }
+                  { app-id = "wezterm"; }
                 ];
                 open-maximized = true;
               }
