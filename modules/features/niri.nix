@@ -257,9 +257,9 @@
               "Mod+Period".expel-window-from-column = _: { };
 
               # spawn programs
-              "Mod+Return".spawn = "wezterm";
+              "Mod+Return".spawn = "ghostty";
               "Mod+W".spawn = "zen";
-              "Mod+E".spawn-sh = "wezterm -e yazi";
+              "Mod+E".spawn-sh = "ghostty -e yazi";
 
               # Screenshot
               "Print".screenshot = _: { };
