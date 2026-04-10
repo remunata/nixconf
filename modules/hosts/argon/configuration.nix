@@ -17,7 +17,6 @@
         # Features
         self.nixosModules.alacritty
         self.nixosModules.coding
-        self.nixosModules.firefox
         self.nixosModules.gaming
         self.nixosModules.niri
         self.nixosModules.no-config

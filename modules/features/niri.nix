@@ -146,7 +146,7 @@
               }
               {
                 matches = [
-                  { app-id = "firefox"; }
+                  { app-id = "zen"; }
                   { app-id = "spotify"; }
                   { app-id = "heroic"; }
                   { app-id = "steam"; }
@@ -257,7 +257,7 @@
 
               # spawn programs
               "Mod+Return".spawn = "wezterm";
-              "Mod+W".spawn = "firefox";
+              "Mod+W".spawn = "zen";
               "Mod+E".spawn-sh = "wezterm -e yazi";
 
               # Screenshot
