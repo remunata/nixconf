@@ -45,6 +45,7 @@
           "steam"
           "steam-unwrapped"
           "obsidian"
+          "postman"
         ];
     };
 }

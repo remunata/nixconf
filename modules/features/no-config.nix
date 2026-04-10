@@ -1,4 +1,4 @@
-{ ... }:
+{ inputs, ... }:
 {
   flake.nixosModules.no-config =
     { pkgs, ... }:
@@ -14,6 +14,8 @@
         pavucontrol
         btop
         obsidian
+
+        inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
       ];
     };
 }
