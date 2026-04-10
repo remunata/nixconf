@@ -158,6 +158,7 @@
                 matches = [
                   { app-id = "Alacritty"; }
                   { app-id = "wezterm"; }
+                  { app-id = "ghostty"; }
                   { is-focused = false; }
                 ];
                 opacity = 0.93;

@@ -18,6 +18,7 @@
       environment.systemPackages = with pkgs; [
         postman
         dbeaver-bin
+        ghostty
       ];
     };
 }
