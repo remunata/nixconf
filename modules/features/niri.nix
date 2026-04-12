@@ -116,7 +116,7 @@
             # Layout configuration
             layout = {
               gaps = 12;
-              always-center-single-column = _: { };
+              center-focused-column = "never";
 
               focus-ring = {
                 width = 5;

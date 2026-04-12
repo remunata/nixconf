@@ -3,7 +3,7 @@
     "settingsVersion": 59,
     "bar": {
       "barType": "simple",
-      "position": "left",
+      "position": "right",
       "monitors": [],
       "density": "comfortable",
       "showOutline": false,
@@ -65,6 +65,7 @@
             "maxWidth": 145,
             "scrollingMode": "hover",
             "showIcon": true,
+            "showText": true,
             "textColor": "none",
             "useFixedWidth": false
           }
@@ -80,20 +81,10 @@
             "useCustomFont": false
           },
           {
-            "compactMode": false,
-            "hideMode": "hidden",
-            "hideWhenIdle": false,
-            "id": "MediaMini",
-            "maxWidth": 145,
-            "panelShowAlbumArt": true,
-            "scrollingMode": "hover",
-            "showAlbumArt": true,
-            "showArtistFirst": true,
-            "showProgressRing": true,
-            "showVisualizer": true,
-            "textColor": "none",
-            "useFixedWidth": false,
-            "visualizerType": "linear"
+            "colorName": "primary",
+            "hideWhenIdle": true,
+            "id": "AudioVisualizer",
+            "width": 120
           }
         ],
         "right": [
@@ -115,13 +106,8 @@
             "unreadBadgeColor": "primary"
           },
           {
-            "deviceNativePath": "__default__",
-            "displayMode": "graphic-clean",
-            "hideIfIdle": false,
-            "hideIfNotDetected": true,
-            "id": "Battery",
-            "showNoctaliaPerformance": false,
-            "showPowerProfiles": false
+            "iconColor": "none",
+            "id": "WallpaperSelector"
           },
           {
             "displayMode": "onhover",
@@ -138,13 +124,23 @@
             "textColor": "none"
           },
           {
-            "colorizeDistroLogo": false,
-            "colorizeSystemIcon": "none",
-            "customIconPath": "",
-            "enableColorization": false,
-            "icon": "noctalia",
-            "id": "ControlCenter",
-            "useDistroLogo": false
+            "displayMode": "onhover",
+            "iconColor": "none",
+            "id": "Network",
+            "textColor": "none"
+          },
+          {
+            "id": "Spacer",
+            "width": 20
+          },
+          {
+            "iconColor": "none",
+            "id": "KeepAwake",
+            "textColor": "none"
+          },
+          {
+            "iconColor": "none",
+            "id": "NoctaliaPerformance"
           }
         ]
       },
@@ -220,7 +216,8 @@
           "Del"
         ]
       },
-      "reverseScroll": false
+      "reverseScroll": false,
+      "smoothScrollEnabled": true
     },
     "ui": {
       "fontDefault": "Noto Sans",
@@ -240,6 +237,7 @@
       "name": "Jambi",
       "weatherEnabled": true,
       "weatherShowEffects": true,
+      "weatherTaliaMascotAlways": false,
       "useFahrenheit": false,
       "use12hourFormat": false,
       "showWeekNumberInCalendar": false,
@@ -248,7 +246,8 @@
       "analogClockInCalendar": false,
       "firstDayOfWeek": -1,
       "hideWeatherTimezone": true,
-      "hideWeatherCityName": true
+      "hideWeatherCityName": true,
+      "autoLocate": false
     },
     "calendar": {
       "cards": [
@@ -286,6 +285,7 @@
       "showHiddenFiles": false,
       "viewMode": "single",
       "setWallpaperOnAllMonitors": true,
+      "linkLightAndDarkWallpapers": true,
       "fillMode": "crop",
       "fillColor": "#000000",
       "useSolidColor": false,
@@ -305,7 +305,7 @@
       "skipStartupTransition": false,
       "transitionEdgeSmoothness": 0.05,
       "panelPosition": "follow_bar",
-      "hideWallpaperFilenames": false,
+      "hideWallpaperFilenames": true,
       "useOriginalImages": false,
       "overviewBlur": 0.4,
       "overviewTint": 0.6,
@@ -335,7 +335,7 @@
       "position": "center",
       "pinnedApps": [],
       "sortByMostUsed": true,
-      "terminalCommand": "wezterm -e",
+      "terminalCommand": "ghostty -e",
       "customLaunchPrefixEnabled": false,
       "customLaunchPrefix": "",
       "viewMode": "list",
@@ -434,7 +434,7 @@
       "externalMonitor": "resources || missioncenter || jdsystemmonitor || corestats || system-monitoring-center || gnome-system-monitor || plasma-systemmonitor || mate-system-monitor || ukui-system-monitor || deepin-system-monitor || pantheon-system-monitor"
     },
     "noctaliaPerformance": {
-      "disableWallpaper": true,
+      "disableWallpaper": false,
       "disableDesktopWidgets": true
     },
     "dock": {
@@ -469,7 +469,6 @@
       "indicatorOpacity": 0.6
     },
     "network": {
-      "airplaneModeEnabled": false,
       "bluetoothRssiPollingEnabled": false,
       "bluetoothRssiPollIntervalMs": 60000,
       "networkPanelView": "wifi",
@@ -615,17 +614,14 @@
       "manualSunrise": "06:30",
       "manualSunset": "18:30",
       "generationMethod": "faithful",
-      "monitorForColors": ""
+      "monitorForColors": "",
+      "syncGsettings": true
     },
     "templates": {
       "activeTemplates": [
         {
           "enabled": true,
           "id": "gtk"
-        },
-        {
-          "enabled": true,
-          "id": "pywalfox"
         },
         {
           "enabled": true,
@@ -688,8 +684,8 @@
     "openedPanel": "",
     "lockScreenActive": false,
     "wallpapers": {
-      "HDMI-A-1": "/home/remunata/Pictures/Wallpapers/purple-circle-mountain.jpeg",
-      "eDP-1": "/home/remunata/Pictures/Wallpapers/purple-circle-mountain.jpeg"
+      "eDP-1": "/home/remunata/Pictures/Wallpapers/Anime-Purple-eyes.png",
+      "HDMI-A-1": "/home/remunata/Pictures/Wallpapers/Anime-Purple-eyes.png"
     },
     "desktopWidgetsEditMode": false,
     "display": {
@@ -725,10 +721,10 @@
       }
     },
     "notificationsState": {
-      "lastSeenTs": 1775359554000
+      "lastSeenTs": 1775995061000
     },
     "changelogState": {
-      "lastSeenVersion": "v4.7.1"
+      "lastSeenVersion": "v4.7.5"
     },
     "colorSchemesList": {
       "schemes": [
@@ -1398,6 +1394,46 @@
             "mOnSurfaceVariant": "#b36d43",
             "mOutline": "#999980",
             "mShadow": "#d7d7d0"
+          }
+        },
+        {
+          "name": "Mine",
+          "path": "Mine",
+          "dark": {
+            "mPrimary": "#e1e2d5",
+            "mOnPrimary": "#1d1b1d",
+            "mSecondary": "#2d2a2e",
+            "mOnSecondary": "#e1e2d5",
+            "mTertiary": "#2d2a2e",
+            "mOnTertiary": "#e1e2d5",
+            "mError": "#d94a59",
+            "mOnError": "#1d1b1d",
+            "mSurface": "#1d1b1d",
+            "mOnSurface": "#e1e2d5",
+            "mSurfaceVariant": "#262427",
+            "mOnSurfaceVariant": "#e1e2d5",
+            "mOutline": "#000023",
+            "mShadow": "#120f18",
+            "mHover": "#2d2a2e",
+            "mOnHover": "#e1e2d5"
+          },
+          "light": {
+            "mPrimary": "#3a3a34",
+            "mOnPrimary": "#ffffff",
+            "mSecondary": "#e6e4e8",
+            "mOnSecondary": "#2d2a2e",
+            "mTertiary": "#f0eef2",
+            "mOnTertiary": "#2d2a2e",
+            "mError": "#d94a59",
+            "mOnError": "#ffffff",
+            "mSurface": "#ffffff",
+            "mOnSurface": "#1d1b1d",
+            "mSurfaceVariant": "#f3f2f5",
+            "mOnSurfaceVariant": "#3a3a3a",
+            "mOutline": "#b8b6bb",
+            "mShadow": "#00000020",
+            "mHover": "#e6e4e8",
+            "mOnHover": "#1d1b1d"
           }
         },
         {
@@ -2073,7 +2109,7 @@
           }
         }
       ],
-      "timestamp": 1775389174
+      "timestamp": 1775995274
     },
     "ui": {
       "settingsSidebarExpanded": true
