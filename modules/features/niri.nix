@@ -17,6 +17,10 @@
         libsForQt5.qt5ct
 
         bibata-cursors
+        (catppuccin-papirus-folders.override {
+          flavor = "mocha";
+          accent = "sky";
+        })
       ];
 
       # Enable ly as display manager
@@ -59,6 +63,9 @@
             spawn-at-startup = [
               noctaliaExe
             ];
+
+            # For noctalia notification actions and window activation
+            debug.honor-xdg-activation-with-invalid-serial = _: { };
 
             # Monitor configuration
             outputs = {
@@ -115,8 +122,9 @@
 
             # Layout configuration
             layout = {
-              gaps = 12;
+              gaps = 16;
               center-focused-column = "never";
+              background-color = "transparent";
 
               focus-ring = {
                 width = 5;
@@ -141,7 +149,7 @@
             # Window rules
             window-rules = [
               {
-                geometry-corner-radius = 12;
+                geometry-corner-radius = 16;
                 clip-to-geometry = true;
               }
               {
@@ -166,6 +174,16 @@
 
               }
             ];
+
+            # Noctalia wallpaper
+            layer-rule = {
+              match = _: {
+                namespace = "^noctalia-wallpaper*";
+              };
+              place-within-backdrop = true;
+            };
+
+            overview.workspace-shadow.off = _: { };
 
             # Prefer no window decoration
             prefer-no-csd = _: { };
