@@ -14,6 +14,7 @@
         pavucontrol
         btop
         obsidian
+        aria2
 
         inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
       ];
