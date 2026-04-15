@@ -43,6 +43,16 @@
         { device = "/dev/disk/by-uuid/00557e44-2601-4569-981b-9e9725c196e3"; }
       ];
 
+      # Second drive
+      fileSystems."/mnt/ssd" = {
+        device = "/dev/disk/by-uuid/17f95d5b-fdce-4ce1-94aa-630e93daf8f2";
+        fsType = "ext4";
+        options = [
+          "defaults"
+          "nofail"
+        ];
+      };
+
       nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
       hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
     };
