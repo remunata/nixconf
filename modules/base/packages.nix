@@ -46,6 +46,7 @@
           "steam-unwrapped"
           "obsidian"
           "postman"
+          "unrar"
         ];
     };
 }

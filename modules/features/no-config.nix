@@ -15,6 +15,12 @@
         obsidian
         aria2
 
+        # Archive tools
+        zip
+        unzip
+        p7zip
+        unrar
+
         inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
 
         (btop.override {
