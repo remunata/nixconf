@@ -27,6 +27,8 @@
         steamtinkerlaunch
         lsfg-vk
         lsfg-vk-ui
+
+        osu-lazer
       ];
 
       nix.settings = {

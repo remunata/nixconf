@@ -48,6 +48,7 @@
           "obsidian"
           "postman"
           "unrar"
+          "osu-lazer"
         ];
     };
 }
