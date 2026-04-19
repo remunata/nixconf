@@ -21,7 +21,7 @@
         self.nixosModules.kanata
         self.nixosModules.niri
         self.nixosModules.no-config
-        self.nixosModules.power-management
+        # self.nixosModules.power-management
         self.nixosModules.recording
         self.nixosModules.shell
         self.nixosModules.spicetify
