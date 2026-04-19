@@ -14,6 +14,7 @@
         pavucontrol
         obsidian
         aria2
+        fastfetch
 
         # Archive tools
         zip
