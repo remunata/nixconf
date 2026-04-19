@@ -18,6 +18,7 @@
         self.nixosModules.alacritty
         self.nixosModules.coding
         self.nixosModules.gaming
+        self.nixosModules.kanata
         self.nixosModules.niri
         self.nixosModules.no-config
         self.nixosModules.power-management

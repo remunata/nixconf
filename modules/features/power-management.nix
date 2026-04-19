@@ -17,8 +17,12 @@
           CPU_MIN_PERF_ON_BAT = 0;
           CPU_MAX_PERF_ON_BAT = 20;
 
-          START_CHARGE_THRESH_BAT0 = 40; # 40 and below it starts to charge
+          START_CHARGE_THRESH_BAT0 = 50; # 50 and below it starts to charge
           STOP_CHARGE_THRESH_BAT0 = 80; # 80 and above it stops charging
+
+          # Always run in AC mode, cause this is my home laptop
+          TLP_DEFAULT_MODE = "AC";
+          TLP_PERSISTENT_DEFAULT = 1;
         };
       };
     };

@@ -11,6 +11,8 @@
           "networkmanager"
           "wheel"
           "docker"
+          "input"
+          "uinput"
         ];
       };
 
