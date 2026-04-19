@@ -122,7 +122,7 @@
 
             # Layout configuration
             layout = {
-              gaps = 16;
+              gaps = 14;
               center-focused-column = "never";
               background-color = "transparent";
 
@@ -158,7 +158,7 @@
                   { app-id = "spotify"; }
                   { app-id = "heroic"; }
                   { app-id = "steam"; }
-                  { app-id = "wezterm"; }
+                  { app-id = "ghostty"; }
                 ];
                 open-maximized = true;
               }
@@ -169,7 +169,7 @@
                   { app-id = "ghostty"; }
                   { is-focused = false; }
                 ];
-                opacity = 0.93;
+                opacity = 0.95;
                 draw-border-with-background = false;
 
               }
