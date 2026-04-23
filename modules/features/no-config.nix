@@ -15,6 +15,8 @@
         obsidian
         aria2
         fastfetch
+        qbittorrent
+        logseq
 
         # Archive tools
         zip
